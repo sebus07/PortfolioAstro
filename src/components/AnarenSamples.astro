@@ -1,0 +1,35 @@
+---
+const items = [
+  "./anaren-images/5-thumb.png",
+  "./anaren-images/4-thumb.png",
+  "./anaren-images/6-thumb.png",
+];
+---
+
+<div class="sample">
+  {
+    items.map((item) => (
+        <img loading="lazy" class="sample" src={item} alt="Anaren sample " />
+    ))
+  }
+</div>
+
+<style>
+  .sample {
+    display: flex;
+    justify-content:  space-evenly;
+    gap: 12px;
+    cursor: auto;
+    width: 250px;
+  }
+  @media (max-width: 768px) {
+    .sample {
+      display: flex;
+      width: 55%;
+      justify-content: left;
+      flex-direction: row;
+      gap: 12px;
+    }
+  }
+</style>
+

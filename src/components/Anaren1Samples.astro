@@ -1,0 +1,33 @@
+---
+const items = [
+  "./anaren-images/1-koukaki.png",
+  "./anaren-images/2-koukaki.png",
+];
+---
+
+<div class="sample">
+  {
+    items.map((item) => (
+        <img loading="lazy" class="sample" src={item} alt="Anaren sample " />
+    ))
+  }
+</div>
+
+<style>
+  .sample {
+    display: flex;
+    justify-content:  space-evenly;
+    gap: 12px;
+    cursor: auto;
+    width: 350px;
+  }
+  @media (max-width: 768px) {
+    .sample {
+      display: flex;
+      width: 55%;
+      justify-content: left;
+      flex-direction: row;
+      gap: 12px;
+    }
+  }
+</style>
